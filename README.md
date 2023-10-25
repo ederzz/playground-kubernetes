@@ -16,7 +16,7 @@ A TeKanAid Academy Playground to practice Kubernetes skills.
 ## k8s demos 
 
 ```
-kubectl apply -f deployment.yaml
+kubectl apply -f yamls/deployment.yaml
 kubectl apply -f yamls/service.yaml 
 kubectl get pods --all-namespaces
 kubectl get svc --all-namespaces
