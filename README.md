@@ -24,5 +24,6 @@ minikube service nginx-service
 minikube ip
 
 kubectl describe pod <pod-name> -n <namespace>
+minikube addons enable metrics-server
 kubectl top pod nginx-deployment-688dc88fd-4ptff -n default
 ```
