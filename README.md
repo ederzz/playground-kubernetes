@@ -12,3 +12,17 @@ A TeKanAid Academy Playground to practice Kubernetes skills.
 - alias kdel="kubectl delete"
 - alias kd="kubectl describe"
 - alias kg="kubectl get"
+
+## k8s demos 
+
+```
+kubectl apply -f deployment.yaml
+kubectl apply -f yamls/service.yaml 
+kubectl get pods --all-namespaces
+kubectl get svc --all-namespaces
+minikube service nginx-service
+minikube ip
+
+kubectl describe pod <pod-name> -n <namespace>
+kubectl top pod nginx-deployment-688dc88fd-4ptff -n default
+```

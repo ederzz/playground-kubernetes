@@ -1,0 +1,27 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 3  # 指定要创建的 Pod 副本数量
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx  # 使用 Nginx 镜像
+        resources:
+          requests:
+            memory: "128Mi"  # 请求的内存
+            cpu: "100m"       # 请求的 CPU
+          limits:
+            memory: "256Mi"  # 上限内存
+            cpu: "200m"       # 上限 CPU
+        ports:
+        - containerPort: 80
