@@ -26,4 +26,7 @@ minikube ip
 kubectl describe pod <pod-name> -n <namespace>
 minikube addons enable metrics-server
 kubectl top pod nginx-deployment-688dc88fd-4ptff -n default
+
+kubectl delete pods --all -n default
+kubectl delete services --all -n default
 ```
